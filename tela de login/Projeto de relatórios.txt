@@ -1,0 +1,22 @@
+< PROJETO AUTOMATIZAÇÃO DOS RELATÓRIOS >
+
+-!= Interface de login (usuario e senha).
+
+-!= Interface principal com Nome do resposável e obra atual.
+
+-!= Avisos de datas pendentes a ser lançadas e divergencias.
+
+-!= tela de lançamentos com campos de valores com campos de (Café, almoço, jantar, hotel, transporte, telefones, combustível, estacionamento, pedágio, diárias e diversos). 
+------------------------------------------------------------ data e cartão ou dinheiro.
+
++!= tela de lançamentos de pesquisa de satisfação com permissão de acesso pelo cliente + termo de entrega de obra com campo de assinatura.
+
+-!= campo na tela de lançamentos para foto da nota fiscal.
+
+-!= tela de administrador para gerenciamento das obras 
+
+-!= tela após selecionar uma obra recebimento das informações.
+
+-!= campo de impressão dos dados.
+
+-!= tela de finalização de obra.
