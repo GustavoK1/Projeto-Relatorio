@@ -1,37 +1,90 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Login</title>
-		</div>
-    </head>
-    <body>
-        <div id="login">
-            <form class="card">
-                <div class="card-header">
-			<p>Login</p>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+    <title>Login</title>
+</head>
+
+<body>
+    <div id="login">
+        <form class="card">
+            <div class="card-header">
+                <p>Login</p>
+            </div>
+            <div class="card-content">
+                <div class="card-content-area">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" id="usuario" autocomplete="off">
                 </div>
-                <div class="card-content">
-                    <div class="card-content-area">
-                        <label for="usuario">Usuário</label>
-                        <input type="text" id="usuario" autocomplete="off">
-                    </div>
-                    <div class="card-content-area">
-                        <label for="password">Senha</label>
-                        <input type="password" id="password" autocomplete="off">
-                    </div>
+                <div class="card-content-area">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" autocomplete="off">
                 </div>
-                <div class="card-footer">
-                    <input type="submit" value="login" class="submit">
-                    <a href="#" class="recuperar_senha">Esqueceu a senha?</a>
+            </div>
+            <div class="card-footer">
+                <input type="submit" value="Login" class="submit">
+                <a href="#" class="recuperar_senha">Esqueceu a senha?</a>
+                <br>
+                <a href="#" id="cadastro_link">Criar conta</a>
+            </div>
+        </form>
+    </div>
+
+    <div id="cadastro" class="hidden">
+        <form class="card">
+            <div class="card-header">
+                <p>Cadastro</p>
+            </div>
+            <div class="card-content">
+                <div class="card-content-area">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" autocomplete="off">
                 </div>
-            </form>
-        </div>
-    </body>
+                <div class="card-content-area">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" autocomplete="off">
+                </div>
+                <div class="card-content-area">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" autocomplete="off">
+                </div>
+            </div>
+            <div class="card-footer">
+                <input type="submit" value="Cadastrar" class="submit">
+                <a href="#" class="voltar_login">Voltar para o login</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function toggleCadastro() {
+            var loginSection = document.getElementById("login");
+            var cadastroSection = document.getElementById("cadastro");
+
+            loginSection.classList.toggle("hidden");
+            cadastroSection.classList.toggle("hidden");
+        }
+	    
+        var cadastroLink = document.getElementById("cadastro_link");
+        cadastroLink.addEventListener("click", function (event) {
+            event.preventDefault();
+            toggleCadastro();
+        });
+
+        var voltarLoginLink = document.querySelector("#cadastro .voltar_login");
+        voltarLoginLink.addEventListener("click", function (event) {
+            event.preventDefault();
+            toggleCadastro();
+        });
+    </script>
+</body>
 
 </html>
